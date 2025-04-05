@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Mừng 8/3 Rực Rỡ</title>
+    <title>Chúc Mừng Sinh Nhật Rực Rỡ</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive;
             margin: 0;
             overflow-x: hidden;
-            background: linear-gradient(45deg, rgba(255, 179, 217, 0.8), rgba(255, 153, 204, 0.8), rgba(255, 128, 191, 0.8)),
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(255, 105, 180, 0.8), rgba(173, 216, 230, 0.8)),
                         url("nền.png");
             background-size: cover;
             background-position: center;
@@ -22,7 +22,7 @@
             padding: 40px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-            box-shadow: 0 0 30px rgba(255, 0, 127, 0.2);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
             position: relative;
             animation: float 3s ease-in-out infinite;
             z-index: 2;
@@ -38,7 +38,7 @@
             width: 150px;
             opacity: 0.7;
             animation: gentleDrift 5s ease-in-out infinite;
-            filter: drop-shadow(0 0 5px rgba(255, 0, 102, 0.3));
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3));
             z-index: 1;
         }
 
@@ -47,7 +47,7 @@
             width: 200px;
             opacity: 0.9;
             animation: gentleDrift 6s ease-in-out infinite;
-            filter: drop-shadow(0 0 10px rgba(255, 0, 102, 0.5));
+            filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.5));
             left: 50%;
             transform: translateX(-50%);
             top: 5%;
@@ -63,12 +63,12 @@
             max-width: 300px;
             margin: 20px auto;
             display: block;
-            filter: drop-shadow(0 0 20px rgba(255, 0, 102, 0.4));
+            filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.4));
             cursor: pointer;
         }
 
         h1 {
-            color: #ff0066;
+            color: #ff69b4;
             font-size: 2.8em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             animation: neonGlow 1.5s ease-in-out infinite alternate;
@@ -76,8 +76,8 @@
         }
 
         @keyframes neonGlow {
-            from { text-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 30px #ff0066; }
-            to { text-shadow: 0 0 20px #ff0066, 0 0 30px #ff0066, 0 0 40px #ff0066; }
+            from { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4; }
+            to { text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4; }
         }
 
         .message {
@@ -88,15 +88,15 @@
         }
 
         #name {
-            color: #ff0066;
+            color: #ff69b4;
             font-weight: bold;
             font-size: 1.6em;
             animation: colorChange 2s infinite alternate;
         }
 
         @keyframes colorChange {
-            0% { color: #ff0066; }
-            100% { color: #ff99cc; }
+            0% { color: #ff69b4; }
+            100% { color: #ffd700; }
         }
 
         .heart {
@@ -126,6 +126,93 @@
             0% { transform: scale(0); opacity: 1; }
             100% { transform: scale(3); opacity: 0; }
         }
+
+        /* Hiệu ứng mới */
+        .bubble {
+            position: fixed;
+            bottom: -50px;
+            animation: floatUp linear infinite;
+            z-index: 1;
+            opacity: 0.8;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+
+        .blossom {
+            position: fixed;
+            top: -50px;
+            animation: fall linear infinite;
+            z-index: 1;
+            opacity: 0.7;
+            transform: rotate(0deg);
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .message span {
+            display: inline-block;
+            animation: dance 1s infinite alternate;
+        }
+
+        @keyframes dance {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .animal {
+            position: fixed;
+            right: -50px;
+            font-size: 30px;
+            animation: run linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes run {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-110vw); }
+        }
+
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        #magicButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #ff69b4, #ffd700);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+            transition: transform 0.3s;
+        }
+
+        #magicButton:hover {
+            transform: scale(1.1);
+        }
+
+        .cake {
+            position: fixed;
+            font-size: 40px;
+            animation: float 3s ease-in-out infinite;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -148,21 +235,26 @@
              alt="Hello Kitty Chính" 
              class="main-kitty">
         
-        <h1>🌸 NGÀY PHỤ NỮ TUYỆT VỜI 🌸</h1>
+        <h1>🎂 SINH NHẬT TUYỆT VỜI 🎂</h1>
         
         <p class="message">
-            🌸💌 Gửi đến thiên thần bé nhỏ <span id="name">Quỳnh Chi</span>! 🌟✨<br>
-            🌼 Sáng nay trời nắng đẹp hơn vì có nụ cười tỏa nắng của em đóaa~ ☀️🤍<br>
-            🎀 Mong em mỗi ngày đều:<br>
-            🐻❄️ Tự tin như công chúa Elsa,<br>
-            🍭 Ngọt ngào như kẹo bông gòn,<br>
-            🌈 Rực rỡ như cầu vồng sau mưa!<br>
-            💐 Học tập thì thi đậu ào ào, đi đâu cũng gặp toàn niềm vui như trúng thưởng 🎁🎉<br>
-            🦄 Mongg rằng sức khỏe của em dồi dào, tình yêu đến với em lãng mạnn nhaaa~ 😉🍰💘<br>
-            🌠 Cứ thế mà tỏa sáng đi, vì em xứng đáng được Universe trao tặng mọi điều kỳ diệu nhất! 🪐💖<br>
-            👉👈 Nhớ là luôn có anh ở đây cùng em nè~ 🤗🌪️<br>
+            🎉🎈 Gửi đến thiên thần <span id="name">Quỳnh Chi</span> của tôi! 🎁✨<br>
+            🍰 Hôm nay là ngày đặc biệt nhất năm - ngày em chào đời! 🎇<br>
+            🌟 Chúc em tuổi mới:<br>
+            🎀 Xinh đẹp rạng ngời như công chúa Disney,<br>
+            🧠 Thông minh sắc sảo hơn cả Sherlock Holmes,<br>
+            💪 Khỏe mạnh dẻo dai như siêu anh hùng!<br>
+            🍀 Một năm mới với trăm ngàn may mắn,<br>
+            💰 Tiền vô như nước, tình vào như mây,<br>
+            🎯 Công việc thuận lợi, học hành thành công!<br>
+            🎨 Cuộc đời em là bức tranh rực rỡ nhất,<br>
+            🎼 Mỗi ngày qua đi là một nốt nhạc vui!<br>
+            � Luôn nhớ rằng có anh ở đây ủng hộ em hết mình! 🤗<br>
+            🎊 Chúc mừng sinh nhật tuổi 18 rực rỡ! 🎂🎁
         </p>
     </div>
+
+    <button id="magicButton">✨ Nhấn để thêm phép màu ✨</button>
 
     <script>
         function createHearts() {
@@ -187,54 +279,4 @@
                 sparkle.style.animationDelay = i * 0.1 + 's';
                 document.body.appendChild(sparkle);
                 
-                setTimeout(() => sparkle.remove(), 1000);
-            }
-        }
-
-        function typeWriter() {
-            const messageElement = document.querySelector('.message');
-            const originalHTML = messageElement.innerHTML;
-            messageElement.innerHTML = '';
-            
-            let i = 0;
-            let tagBuffer = '';
-            let isTag = false;
-
-            function type() {
-                if (i < originalHTML.length) {
-                    const char = originalHTML.charAt(i);
-                    
-                    if (char === '<') isTag = true;
-                    if (char === '>') {
-                        isTag = false;
-                        tagBuffer += char;
-                        messageElement.innerHTML += tagBuffer;
-                        tagBuffer = '';
-                        i++;
-                        return setTimeout(type, 10);
-                    }
-                    
-                    if (isTag) {
-                        tagBuffer += char;
-                    } else {
-                        messageElement.innerHTML += char;
-                    }
-                    
-                    i++;
-                    setTimeout(type, 50);
-                }
-            }
-            type();
-        }
-
-        window.onload = function() {
-            createHearts();
-            typeWriter();
-            
-            document.querySelector('.main-kitty').addEventListener('click', function(e) {
-                createSparkle(e);
-            });
-        }
-    </script>
-</body>
-</html>
+                setTimeout(() => sparkle.remove(), 
